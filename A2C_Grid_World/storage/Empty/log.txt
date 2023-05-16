@@ -1,0 +1,118 @@
+/home/christabel/Documents/Projects/CMSC 764/Cost_Efficient_RL/myenv/RL Starter Files/rl-starter-files/scripts/train.py
+
+{'algo': 'a2c', 'env': 'MiniGrid-Empty-Random-6x6-v0', 'model': 'Empty', 'seed': 1, 'epochs': 4, 'log_interval': 1, 'save_interval': 10, 'procs': 16, 'frames': 80000, 'batch_size': 256, 'discount': 0.99, 'lr': 0.001, 'gae_lambda': 0.95, 'entropy_coef': 0.01, 'value_loss_coef': 0.5, 'max_grad_norm': 0.5, 'optim_eps': 1e-08, 'optim_alpha': 0.99, 'clip_eps': 0.2, 'recurrence': 1, 'frames_per_proc': 128, 'text': False, 'mem': False}
+
+Device: cpu
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 5228 | D 0 | rR:μσmM 0.45 0.38 0.00 0.98 | F:μσmM 28.6 33.4 0.0 110.0 | H 1.924 | V -0.131 | pL -0.088 | vL 0.022 | ∇ 0.085
+U 2 | F 004096 | FPS 5429 | D 0 | rR:μσmM 0.29 0.39 0.00 0.98 | F:μσmM 104.1 54.8 3.0 144.0 | H 1.907 | V -0.045 | pL -0.066 | vL 0.014 | ∇ 0.054
+U 3 | F 006144 | FPS 4932 | D 1 | rR:μσmM 0.47 0.37 0.00 0.99 | F:μσmM 80.6 53.6 2.0 144.0 | H 1.913 | V 0.050 | pL -0.095 | vL 0.026 | ∇ 0.085
+U 4 | F 008192 | FPS 5640 | D 1 | rR:μσmM 0.44 0.36 0.00 0.99 | F:μσmM 84.7 51.6 1.0 144.0 | H 1.904 | V 0.101 | pL -0.054 | vL 0.018 | ∇ 0.069
+U 5 | F 010240 | FPS 5905 | D 1 | rR:μσmM 0.66 0.29 0.00 0.98 | F:μσmM 52.6 43.5 4.0 144.0 | H 1.869 | V 0.267 | pL -0.112 | vL 0.030 | ∇ 0.133
+U 6 | F 012288 | FPS 5569 | D 2 | rR:μσmM 0.80 0.19 0.13 0.99 | F:μσmM 31.7 30.6 1.0 139.0 | H 1.803 | V 0.417 | pL -0.142 | vL 0.024 | ∇ 0.171
+U 7 | F 014336 | FPS 5475 | D 2 | rR:μσmM 0.87 0.11 0.28 0.99 | F:μσmM 20.6 18.1 1.0 116.0 | H 1.729 | V 0.596 | pL -0.130 | vL 0.017 | ∇ 0.140
+U 8 | F 016384 | FPS 6203 | D 2 | rR:μσmM 0.89 0.09 0.60 0.99 | F:μσmM 17.2 13.9 2.0 64.0 | H 1.665 | V 0.700 | pL -0.084 | vL 0.011 | ∇ 0.164
+U 9 | F 018432 | FPS 5762 | D 3 | rR:μσmM 0.90 0.08 0.59 0.99 | F:μσmM 15.5 12.7 1.0 66.0 | H 1.541 | V 0.744 | pL -0.069 | vL 0.008 | ∇ 0.155
+U 10 | F 020480 | FPS 5057 | D 3 | rR:μσmM 0.93 0.05 0.61 0.99 | F:μσmM 11.0 8.4 1.0 62.0 | H 1.470 | V 0.826 | pL -0.066 | vL 0.005 | ∇ 0.152
+Status saved
+U 11 | F 022528 | FPS 5304 | D 4 | rR:μσmM 0.94 0.04 0.73 0.99 | F:μσmM 9.8 6.9 1.0 43.0 | H 1.455 | V 0.854 | pL -0.013 | vL 0.003 | ∇ 0.099
+U 12 | F 024576 | FPS 5860 | D 4 | rR:μσmM 0.94 0.04 0.77 0.99 | F:μσmM 9.6 6.2 1.0 36.0 | H 1.344 | V 0.866 | pL -0.021 | vL 0.002 | ∇ 0.088
+U 13 | F 026624 | FPS 5794 | D 4 | rR:μσmM 0.95 0.03 0.80 0.99 | F:μσmM 8.8 5.3 1.0 32.0 | H 1.280 | V 0.880 | pL -0.010 | vL 0.002 | ∇ 0.047
+U 14 | F 028672 | FPS 5618 | D 5 | rR:μσmM 0.95 0.03 0.85 0.99 | F:μσmM 8.0 4.5 1.0 24.0 | H 1.315 | V 0.894 | pL -0.010 | vL 0.001 | ∇ 0.046
+U 15 | F 030720 | FPS 5359 | D 5 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 8.2 4.6 1.0 29.0 | H 1.296 | V 0.893 | pL 0.001 | vL 0.001 | ∇ 0.033
+U 16 | F 032768 | FPS 5181 | D 5 | rR:μσmM 0.96 0.02 0.86 0.99 | F:μσmM 7.1 3.9 1.0 23.0 | H 1.236 | V 0.908 | pL -0.008 | vL 0.001 | ∇ 0.035
+U 17 | F 034816 | FPS 6022 | D 6 | rR:μσmM 0.95 0.03 0.85 0.99 | F:μσmM 8.1 4.7 1.0 24.0 | H 1.322 | V 0.894 | pL 0.004 | vL 0.001 | ∇ 0.032
+U 18 | F 036864 | FPS 5932 | D 6 | rR:μσmM 0.95 0.03 0.86 0.99 | F:μσmM 8.2 4.6 1.0 23.0 | H 1.318 | V 0.895 | pL 0.006 | vL 0.001 | ∇ 0.046
+U 19 | F 038912 | FPS 5856 | D 7 | rR:μσmM 0.95 0.03 0.86 0.99 | F:μσmM 7.8 4.1 1.0 23.0 | H 1.314 | V 0.900 | pL -0.006 | vL 0.001 | ∇ 0.032
+U 20 | F 040960 | FPS 5873 | D 7 | rR:μσmM 0.95 0.03 0.79 0.99 | F:μσmM 8.4 4.9 1.0 34.0 | H 1.365 | V 0.890 | pL 0.001 | vL 0.001 | ∇ 0.043
+Status saved
+U 21 | F 043008 | FPS 4964 | D 7 | rR:μσmM 0.94 0.03 0.82 0.99 | F:μσmM 8.9 5.0 1.0 28.0 | H 1.292 | V 0.885 | pL 0.000 | vL 0.001 | ∇ 0.051
+U 22 | F 045056 | FPS 5757 | D 8 | rR:μσmM 0.95 0.03 0.80 0.99 | F:μσmM 7.6 4.2 1.0 32.0 | H 1.281 | V 0.900 | pL -0.010 | vL 0.001 | ∇ 0.038
+U 23 | F 047104 | FPS 5499 | D 8 | rR:μσmM 0.95 0.03 0.85 0.99 | F:μσmM 7.7 4.0 1.0 24.0 | H 1.329 | V 0.903 | pL 0.007 | vL 0.001 | ∇ 0.035
+U 24 | F 049152 | FPS 5744 | D 8 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 8.8 5.0 1.0 29.0 | H 1.290 | V 0.889 | pL 0.013 | vL 0.001 | ∇ 0.045
+U 25 | F 051200 | FPS 5923 | D 9 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 7.7 4.5 1.0 28.0 | H 1.297 | V 0.900 | pL -0.002 | vL 0.001 | ∇ 0.044
+U 26 | F 053248 | FPS 5823 | D 9 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 8.0 5.0 1.0 28.0 | H 1.267 | V 0.891 | pL -0.002 | vL 0.001 | ∇ 0.047
+U 27 | F 055296 | FPS 6100 | D 9 | rR:μσmM 0.95 0.02 0.87 0.99 | F:μσmM 7.3 3.9 1.0 21.0 | H 1.266 | V 0.903 | pL -0.013 | vL 0.001 | ∇ 0.060
+U 28 | F 057344 | FPS 6074 | D 10 | rR:μσmM 0.95 0.03 0.81 0.99 | F:μσmM 7.9 4.3 1.0 31.0 | H 1.381 | V 0.901 | pL 0.012 | vL 0.001 | ∇ 0.048
+U 29 | F 059392 | FPS 5560 | D 10 | rR:μσmM 0.95 0.03 0.86 0.99 | F:μσmM 8.1 4.4 1.0 23.0 | H 1.342 | V 0.896 | pL 0.003 | vL 0.001 | ∇ 0.062
+U 30 | F 061440 | FPS 5248 | D 11 | rR:μσmM 0.95 0.03 0.87 0.99 | F:μσmM 8.1 4.1 1.0 21.0 | H 1.331 | V 0.895 | pL 0.002 | vL 0.001 | ∇ 0.044
+Status saved
+U 31 | F 063488 | FPS 5691 | D 11 | rR:μσmM 0.95 0.03 0.84 0.99 | F:μσmM 8.5 4.8 1.0 25.0 | H 1.305 | V 0.889 | pL 0.000 | vL 0.001 | ∇ 0.074
+U 32 | F 065536 | FPS 5353 | D 11 | rR:μσmM 0.95 0.03 0.84 0.99 | F:μσmM 8.5 4.7 1.0 26.0 | H 1.296 | V 0.895 | pL -0.005 | vL 0.001 | ∇ 0.065
+U 33 | F 067584 | FPS 5102 | D 12 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 7.6 4.2 1.0 29.0 | H 1.272 | V 0.902 | pL -0.009 | vL 0.001 | ∇ 0.057
+U 34 | F 069632 | FPS 5706 | D 12 | rR:μσmM 0.95 0.03 0.86 0.99 | F:μσmM 7.8 4.2 1.0 23.0 | H 1.272 | V 0.898 | pL 0.001 | vL 0.001 | ∇ 0.054
+U 35 | F 071680 | FPS 5811 | D 12 | rR:μσmM 0.95 0.03 0.85 0.99 | F:μσmM 7.9 4.3 1.0 24.0 | H 1.301 | V 0.901 | pL 0.016 | vL 0.001 | ∇ 0.047
+U 36 | F 073728 | FPS 5351 | D 13 | rR:μσmM 0.95 0.03 0.88 0.99 | F:μσmM 7.9 4.3 1.0 20.0 | H 1.280 | V 0.899 | pL -0.003 | vL 0.001 | ∇ 0.036
+U 37 | F 075776 | FPS 5440 | D 13 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 7.8 4.4 1.0 29.0 | H 1.303 | V 0.899 | pL 0.006 | vL 0.001 | ∇ 0.031
+U 38 | F 077824 | FPS 5386 | D 14 | rR:μσmM 0.95 0.03 0.82 0.99 | F:μσmM 7.7 4.7 1.0 28.0 | H 1.256 | V 0.900 | pL 0.010 | vL 0.001 | ∇ 0.048
+U 39 | F 079872 | FPS 5706 | D 14 | rR:μσmM 0.95 0.03 0.86 0.99 | F:μσmM 8.0 4.1 1.0 22.0 | H 1.222 | V 0.898 | pL -0.006 | vL 0.001 | ∇ 0.034
+U 40 | F 081920 | FPS 5763 | D 14 | rR:μσmM 0.95 0.03 0.81 0.99 | F:μσmM 7.7 4.6 1.0 31.0 | H 1.220 | V 0.897 | pL 0.001 | vL 0.001 | ∇ 0.038
+Status saved
+/home/christabel/Documents/Projects/CMSC 764/Cost_Efficient_RL/myenv/RL Starter Files/rl-starter-files/scripts/train.py
+
+{'algo': 'a2c', 'env': 'MiniGrid-Empty-Random-6x6-v0', 'model': 'Empty', 'seed': 1, 'epochs': 4, 'log_interval': 1, 'save_interval': 10, 'procs': 16, 'frames': 80000, 'batch_size': 256, 'discount': 0.99, 'lr': 0.001, 'gae_lambda': 0.95, 'entropy_coef': 0.01, 'value_loss_coef': 0.5, 'max_grad_norm': 0.5, 'optim_eps': 1e-08, 'optim_alpha': 0.99, 'clip_eps': 0.2, 'recurrence': 1, 'frames_per_proc': 128, 'text': False, 'mem': False}
+
+Device: cpu
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
